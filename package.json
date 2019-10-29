@@ -4,19 +4,21 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "brain-games": "./src/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js"
    },
   "files": [
   	"dist"
    ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "test",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Applifort/frontend-project-lvl1.git"
   },
-  "author": "",
+  "author": "Gabitov Artur",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Applifort/frontend-project-lvl1/issues"
