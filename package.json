@@ -5,10 +5,10 @@
   "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
-   },
+  },
   "files": [
-  	"dist"
-   ],
+    "dist"
+  ],
   "scripts": {
     "test": "test",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
@@ -29,5 +29,8 @@
     "@babel/core": "^7.6.4",
     "@babel/node": "^7.6.3",
     "@babel/preset-env": "^7.6.3"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
