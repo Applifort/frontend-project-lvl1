@@ -1,7 +1,8 @@
 import readlineSync from 'readline-sync';
 
 console.log('Welcome to the Brain Games!');
+console.log('ddfff');
 
-export const actual = readlineSync.question('May I have your name? ');
-console.log('Hello, ' + actual + '!');
-
+const actual = readlineSync.question('May I have your name? ');
+export default actual;
+console.log(`Hello, ${actual} !`);
