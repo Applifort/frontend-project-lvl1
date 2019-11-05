@@ -10,20 +10,20 @@
 
 Шаг 1. Установка Nodejs
 
- sudo apt-get install nodejs
+    sudo apt-get install nodejs
  
 Далее понадобится установить менеджер пакетов:
-
-  sudo apt-get install npm
-  
+    
+    sudo apt-get install npm
+    
 На этом установка закончена, у вас появилась команда node.
-
-  node
-
+    
+    node
+    
 Шаг 2: Установка игры. В директории, куда хотите установить игру
-  
-  npm install gamegabitov13
+   
+    npm install gamegabitov13
   
  Для запуска игры, воспользуйтесь командой 
   
-  brain-even
+    brain-even
