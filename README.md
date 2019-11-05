@@ -6,13 +6,13 @@
 
 [![asciicast](https://asciinema.org/a/JYp6rj2AadAsriZn9NeiwxBh2.svg)](https://asciinema.org/a/JYp6rj2AadAsriZn9NeiwxBh2)
 
-Игра консольная, поэтому для того чтобы запустить игру необходимо установить NodeJs
+Игра консольная, поэтому для того чтобы запустить игру необходимо установить NodeJS
 
 Инструкция ниже дана для пользователей с Debian подобными ОС.
 
-Если NodeJs установлен, переходим к шагу 2
+Если NodeJS установлен, переходим к шагу 2
 
-Шаг 1. Установка NodeJs
+Шаг 1. Установка NodeJS
 
     sudo apt-get install nodejs
  
