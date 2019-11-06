@@ -4,6 +4,7 @@ import gameEven from './games/gameEven';
 import gameCalc from './games/gameCalc';
 import gameGcd from './games/gameGcd';
 import gameProgression from './games/gameProgression';
+import gamePrime from './games/gamePrime';
 
 // Игру можно запустить с аргументом GameEven и GameCalc - это выбор игры.
 // если запустить без аргумента, то пройдет просто приветствие.
@@ -22,6 +23,9 @@ const game = (nameOfGame) => {
       break;
     case 'gameProgression':
       console.log('What number is missing in the progression?');
+      break;
+    case 'gamePrime':
+      console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
       break;
     default: break;
   }
@@ -42,6 +46,9 @@ const game = (nameOfGame) => {
         break;
       case 'gameProgression':
         gameQA = gameProgression();
+        break;
+      case 'gamePrime':
+        gameQA = gamePrime();
         break;
       default: return;
     }
