@@ -4,7 +4,15 @@
 <a href="https://codeclimate.com/github/Applifort/frontend-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/cf7e57323317d8369c49/test_coverage" /></a>
 [![Build Status](https://travis-ci.org/Applifort/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Applifort/frontend-project-lvl1)
 
+Установка и запуск игры Calc.
+
 [![asciicast](https://asciinema.org/a/Yh7Gxl0GQXgNPttVO4sxWtg5e.svg)](https://asciinema.org/a/Yh7Gxl0GQXgNPttVO4sxWtg5e)
+
+Установка и запуск игры GCD.
+
+[![asciicast](https://asciinema.org/a/9rEcsgV0v0LDoAEbmkXqGU17L.svg)](https://asciinema.org/a/9rEcsgV0v0LDoAEbmkXqGU17L)
+
+"brain-calc": "dist/bin/brain-calc.js",
 
 Игра консольная, поэтому для того чтобы запустить игру необходимо установить NodeJS
 
