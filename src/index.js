@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import { car, cdr } from '@hexlet/pairs';
 import gameEven from './games/gameEven';
 import gameCalc from './games/gameCalc';
+import gameGcd from './games/gameGcd';
 
 // Игру можно запустить с аргументом GameEven и GameCalc - это выбор игры.
 // если запустить без аргумента, то пройдет просто приветствие.
@@ -14,6 +15,9 @@ const game = (nameOfGame) => {
       break;
     case 'gameCalc':
       console.log('What is the result of the expression?');
+      break;
+    case 'gameGcd':
+      console.log('Find the greatest common divisor of given numbers.');
       break;
     default: break;
   }
@@ -28,6 +32,9 @@ const game = (nameOfGame) => {
         break;
       case 'gameCalc':
         gameQA = gameCalc();
+        break;
+      case 'gameGcd':
+        gameQA = gameGcd();
         break;
       default: return;
     }
