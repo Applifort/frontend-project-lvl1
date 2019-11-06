@@ -20,6 +20,10 @@
 
 [![asciicast](https://asciinema.org/a/PxAS4OjqZizGImEI4yRIu2pWw.svg)](https://asciinema.org/a/PxAS4OjqZizGImEI4yRIu2pWw)
 
+Установка и запуск игры Prime.
+
+[![asciicast](https://asciinema.org/a/KNQdSPoXCDKFAsHkjuSfV52JJ.svg)](https://asciinema.org/a/KNQdSPoXCDKFAsHkjuSfV52JJ)
+
 "brain-calc": "dist/bin/brain-calc.js",
 
 Игра консольная, поэтому для того чтобы запустить игру необходимо установить NodeJS
