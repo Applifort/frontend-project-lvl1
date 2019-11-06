@@ -4,6 +4,10 @@
 <a href="https://codeclimate.com/github/Applifort/frontend-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/cf7e57323317d8369c49/test_coverage" /></a>
 [![Build Status](https://travis-ci.org/Applifort/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Applifort/frontend-project-lvl1)
 
+Установка и запуск игры Even.
+
+[![asciicast](https://asciinema.org/a/uBp0IosjG3pnkvIWAXBneS9U6.svg)](https://asciinema.org/a/uBp0IosjG3pnkvIWAXBneS9U6)
+
 Установка и запуск игры Calc.
 
 [![asciicast](https://asciinema.org/a/Yh7Gxl0GQXgNPttVO4sxWtg5e.svg)](https://asciinema.org/a/Yh7Gxl0GQXgNPttVO4sxWtg5e)
@@ -11,6 +15,10 @@
 Установка и запуск игры GCD.
 
 [![asciicast](https://asciinema.org/a/9rEcsgV0v0LDoAEbmkXqGU17L.svg)](https://asciinema.org/a/9rEcsgV0v0LDoAEbmkXqGU17L)
+
+Установка и запуск игры Progression.
+
+[![asciicast](https://asciinema.org/a/PxAS4OjqZizGImEI4yRIu2pWw.svg)](https://asciinema.org/a/PxAS4OjqZizGImEI4yRIu2pWw)
 
 "brain-calc": "dist/bin/brain-calc.js",
 
