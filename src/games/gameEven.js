@@ -1,17 +1,10 @@
-import { letRandom, isEven, BoolAnswer, correctAnswer } from '../mymath';
-import { inputAnswer } from '..';
+import { cons } from '@hexlet/pairs';
+import { letRandom, isEven } from './mymath';
 
-const gameEven = (name = 'Гость') => {
-  for (let i = 0; i < 3; i += 1) {
-    const number = letRandom(0, 100);
-    console.log(`question: ${number}`);
-    const answer = inputAnswer();
-    if (isEven(number) !== BoolAnswer(answer)) {
-      console.log(`${answer} is wrong answer;(. Correct answer was ${correctAnswer(number)}`);
-      console.log(`Let's try again, ${name}`);
-      return gameEven(name);
-    } console.log('Correct!');
-  } return console.log(`Congratulations, ${name}!`);
+const gameEven = () => {
+  const number = letRandom(0, 100);
+  const rightAnswer = isEven(number) ? 'yes' : 'no';
+  return cons(number, rightAnswer);
 };
 
 export default gameEven;

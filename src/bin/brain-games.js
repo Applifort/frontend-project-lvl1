@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import actual from '..';
+import game from '..';
 
-console.log('Welcome to the Brain Games!');
-const name = actual();
-console.log(`Hello, ${name}!`);
+game();

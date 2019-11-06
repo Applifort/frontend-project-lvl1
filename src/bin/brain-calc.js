@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { letRandom, isEven, BoolAnswer, correctAnswer } from '../mymath';
+import game from '..';
 
-console.log(letRandom(0, 1000));
+game('gameCalc');
