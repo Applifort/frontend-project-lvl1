@@ -3,6 +3,7 @@ import { car, cdr } from '@hexlet/pairs';
 import gameEven from './games/gameEven';
 import gameCalc from './games/gameCalc';
 import gameGcd from './games/gameGcd';
+import gameProgression from './games/gameProgression';
 
 // Игру можно запустить с аргументом GameEven и GameCalc - это выбор игры.
 // если запустить без аргумента, то пройдет просто приветствие.
@@ -18,6 +19,9 @@ const game = (nameOfGame) => {
       break;
     case 'gameGcd':
       console.log('Find the greatest common divisor of given numbers.');
+      break;
+    case 'gameProgression':
+      console.log('What number is missing in the progression?');
       break;
     default: break;
   }
@@ -35,6 +39,9 @@ const game = (nameOfGame) => {
         break;
       case 'gameGcd':
         gameQA = gameGcd();
+        break;
+      case 'gameProgression':
+        gameQA = gameProgression();
         break;
       default: return;
     }
