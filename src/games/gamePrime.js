@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import letRandom from './mymath';
+import letRandom from '../mymath';
 import gameEngine from '..';
 
 const gameGenerator = () => {
