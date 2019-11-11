@@ -1,7 +1,8 @@
 import { cons } from '@hexlet/pairs';
-import { letRandom } from './mymath';
+import letRandom from './mymath';
+import gameEngine from '..';
 
-const gameCalc = () => {
+const gameGenerator = () => {
   const a = letRandom(0, 100);
   const b = letRandom(0, 10);
   const v = letRandom(1, 3);
@@ -9,18 +10,23 @@ const gameCalc = () => {
   let resultExpr = null;
   switch (v) {
     case 1:
-      stringExpr = `${a} + ${b}`;
+      stringExpr = '+';
       resultExpr = a + b;
       break;
     case 2:
-      stringExpr = `${a} * ${b}`;
+      stringExpr = '*';
       resultExpr = a * b;
       break;
     default:
-      stringExpr = `${a} / ${b}`;
+      stringExpr = '/';
       resultExpr = a / b;
   }
-  return cons(stringExpr, String(resultExpr));
+  return cons(`${a} ${stringExpr} ${b}`, String(resultExpr));
+};
+
+const gameCalc = () => {
+  const gameIntroduction = 'What is the result of the expression?';
+  gameEngine(gameIntroduction, gameGenerator);
 };
 
 export default gameCalc;

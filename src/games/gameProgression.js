@@ -1,7 +1,8 @@
 import { cons } from '@hexlet/pairs';
-import { letRandom } from './mymath';
+import letRandom from './mymath';
+import gameEngine from '..';
 
-const gameProgression = () => {
+const gameGenerator = () => {
   const arr = [];
   arr[0] = letRandom(1, 20);
   const volOfProg = letRandom(1, 10);
@@ -15,6 +16,11 @@ const gameProgression = () => {
   }
   const hiddenElement = arr[elementOfHide];
   return cons(progMiss, String(hiddenElement));
+};
+
+const gameProgression = () => {
+  const gameIntroduction = 'What number is missing in the progression?';
+  gameEngine(gameIntroduction, gameGenerator);
 };
 
 export default gameProgression;
