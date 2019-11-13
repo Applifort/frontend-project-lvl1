@@ -2,22 +2,23 @@ import { cons } from '@hexlet/pairs';
 import letRandom from '../mymath';
 import gameEngine from '..';
 
-const nodAB = (a, b, i = b) => {
+const getGcd = (a, b, i = b) => {
   if (a % i === 0 && b % i === 0) return i;
   const acc = i - 1;
-  return nodAB(a, b, acc);
+  return getGcd(a, b, acc);
 };
 
-const gameGenerator = () => {
-  const a = letRandom(1, 50);
-  const b = letRandom(1, 25);
-  const result = nodAB(a, b);
-  return cons(`${a} ${b}`, String(result));
+const getQuestion = () => {
+  const firstNumber = letRandom(1, 50);
+  const secondNumber = letRandom(1, 25);
+  const answer = String(getGcd(firstNumber, secondNumber));
+  return cons(`${firstNumber} ${secondNumber}`, answer);
 };
+
+const gameIntroduction = 'Find the greatest common divisor of given numbers.';
 
 const gameGcd = () => {
-  const gameIntroduction = 'Find the greatest common divisor of given numbers.';
-  gameEngine(gameIntroduction, gameGenerator);
+  gameEngine(gameIntroduction, getQuestion);
 };
 
 export default gameGcd;
