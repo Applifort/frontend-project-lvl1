@@ -2,10 +2,10 @@ import { cons } from '@hexlet/pairs';
 import letRandom from '../mymath';
 import gameEngine from '..';
 
-const getGcd = (a, b, i = b) => {
-  if (a % i === 0 && b % i === 0) return i;
+const getGcd = (num1, num2, i = num2) => {
+  if (num1 % i === 0 && num2 % i === 0) return i;
   const acc = i - 1;
-  return getGcd(a, b, acc);
+  return getGcd(num1, num2, acc);
 };
 
 const getQuestion = () => {
