@@ -5,12 +5,12 @@ import gameEngine from '..';
 
 const gameIntroduction = 'What is the result of the expression?';
 
-const operatorsList = l('+', '/', '*');
+const operators = l('+', '/', '*');
 
 const getQa = () => {
   const num1 = letRandom(0, 100);
   const num2 = letRandom(0, 10);
-  const operator = random(operatorsList);
+  const operator = random(operators);
   let answer = null;
   switch (operator) {
     case '+':
