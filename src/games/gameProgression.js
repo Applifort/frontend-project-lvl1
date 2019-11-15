@@ -1,6 +1,8 @@
 import { cons } from '@hexlet/pairs';
-import letRandom from '../mymath';
+import letRandom from '../utils';
 import gameEngine from '..';
+
+const gameIntroduction = 'What number is missing in the progression?';
 
 const getQa = () => {
   const boxOfNumbers = [];
@@ -19,10 +21,4 @@ const getQa = () => {
   return cons(question, answer);
 };
 
-const gameIntroduction = 'What number is missing in the progression?';
-
-const gameProgression = () => {
-  gameEngine(gameIntroduction, getQa);
-};
-
-export default gameProgression;
+export default () => gameEngine(gameIntroduction, getQa);

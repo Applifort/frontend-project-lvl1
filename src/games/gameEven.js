@@ -2,6 +2,8 @@ import { cons } from '@hexlet/pairs';
 import letRandom from '../utils';
 import gameEngine from '..';
 
+const gameIntroduction = 'Answer "yes" if the question is even, otherwise answer "no".';
+
 const isEven = (number) => number % 2 === 0;
 
 const getQa = () => {
@@ -10,10 +12,4 @@ const getQa = () => {
   return cons(question, answer);
 };
 
-const gameIntroduction = 'Answer "yes" if the question is even, otherwise answer "no".';
-
-const gameEven = () => {
-  gameEngine(gameIntroduction, getQa);
-};
-
-export default gameEven;
+export default () => gameEngine(gameIntroduction, getQa);

@@ -3,6 +3,8 @@ import { l, random } from '@hexlet/pairs-data';
 import letRandom from '../utils';
 import gameEngine from '..';
 
+const gameIntroduction = 'What is the result of the expression?';
+
 const operatorsList = l('+', '/', '*');
 
 const getQa = () => {
@@ -24,8 +26,4 @@ const getQa = () => {
   return cons(question, answer);
 };
 
-const gameIntroduction = 'What is the result of the expression?';
-
-const gameCalc = () => gameEngine(gameIntroduction, getQa);
-
-export default gameCalc;
+export default () => gameEngine(gameIntroduction, getQa);
