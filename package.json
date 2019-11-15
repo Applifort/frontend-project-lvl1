@@ -1,8 +1,7 @@
 {
   "name": "gamegabitov13",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "",
-  "main": "index.js",
   "bin": {
     "brain-prime": "dist/bin/brain-prime.js",
     "brain-progression": "dist/bin/brain-progression.js",
