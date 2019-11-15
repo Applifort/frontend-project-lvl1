@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
 import { l, random } from '@hexlet/pairs-data';
-import letRandom from '../mymath';
+import letRandom from '../utils';
 import gameEngine from '..';
 
 const operatorsList = l('+', '/', '*');
