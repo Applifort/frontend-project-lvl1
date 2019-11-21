@@ -10,10 +10,10 @@ const isPrime = (number) => {
   } return true;
 };
 
-const getQa = () => {
+const getQuestionAndAnswer = () => {
   const question = letRandom(2, 500);
   const answer = isPrime(question) ? 'yes' : 'no';
   return cons(question, answer);
 };
 
-export default () => gameEngine(gameIntroduction, getQa);
+export default () => gameEngine(gameIntroduction, getQuestionAndAnswer);

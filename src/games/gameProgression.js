@@ -4,21 +4,21 @@ import gameEngine from '..';
 
 const gameIntroduction = 'What number is missing in the progression?';
 
-const getQa = () => {
-  const boxOfNumbers = [];
-  boxOfNumbers[0] = letRandom(1, 20);
-  const valueOfProgression = letRandom(1, 10);
-  const elementToHide = letRandom(3, 9);
-  const quantityOfElements = 10;
-  let question = `${boxOfNumbers[0]}`;
-  for (let i = 1; i < quantityOfElements; i += 1) {
-    boxOfNumbers[i] = boxOfNumbers[0] + valueOfProgression * i;
-    if (i !== elementToHide) {
-      question = `${question} ${boxOfNumbers[i]}`;
+const progressionLength = 10;
+
+const getQustionAndAnswer = () => {
+  const startElement = letRandom(1, 20);
+  const incrimentValue = letRandom(1, 10);
+  const hiddingIndex = letRandom(3, 9);
+  let question = '';
+  for (let i = 0; i < progressionLength; i += 1) {
+    if (i !== hiddingIndex) {
+      const nextElement = startElement + incrimentValue * i;
+      question = `${question} ${nextElement}`;
     } else question = `${question} ..`;
   }
-  const answer = String(boxOfNumbers[elementToHide]);
+  const answer = String(startElement + incrimentValue * hiddingIndex);
   return cons(question, answer);
 };
 
-export default () => gameEngine(gameIntroduction, getQa);
+export default () => gameEngine(gameIntroduction, getQustionAndAnswer);

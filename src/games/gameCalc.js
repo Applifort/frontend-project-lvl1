@@ -7,7 +7,7 @@ const gameIntroduction = 'What is the result of the expression?';
 
 const operators = l('+', '/', '*');
 
-const getQa = () => {
+const getQuestionAndAnswer = () => {
   const num1 = letRandom(0, 100);
   const num2 = letRandom(0, 10);
   const operator = random(operators);
@@ -19,11 +19,16 @@ const getQa = () => {
     case '*':
       answer = String(num1 * num2);
       break;
-    default:
+    case '/':
       answer = String(num1 / num2);
+      break;
+    default:
+      answer = false;
+      break;
   }
   const question = `${num1} ${operator} ${num2}`;
   return cons(question, answer);
 };
 
-export default () => gameEngine(gameIntroduction, getQa);
+export default () => gameEngine(gameIntroduction, getQuestionAndAnswer);
+console.log('Tghnc');

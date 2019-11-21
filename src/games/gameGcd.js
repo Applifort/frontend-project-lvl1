@@ -9,7 +9,7 @@ const getGcd = (num1, num2) => {
   return getGcd(num2, num1 % num2);
 };
 
-const getQa = () => {
+const getQuestionAndAnswer = () => {
   const num1 = letRandom(1, 50);
   const num2 = letRandom(1, 25);
   const answer = String(getGcd(num1, num2));
@@ -17,4 +17,4 @@ const getQa = () => {
   return cons(question, answer);
 };
 
-export default () => gameEngine(gameIntroduction, getQa);
+export default () => gameEngine(gameIntroduction, getQuestionAndAnswer);
