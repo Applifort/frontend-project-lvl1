@@ -9,15 +9,15 @@ const progressionLength = 10;
 const getQustionAndAnswer = () => {
   const startElement = letRandom(1, 20);
   const incrimentValue = letRandom(1, 10);
-  const hiddingIndex = letRandom(3, 9);
+  const hiddenIndex = letRandom(3, 9);
   let question = '';
   for (let i = 0; i < progressionLength; i += 1) {
-    if (i !== hiddingIndex) {
+    if (i !== hiddenIndex) {
       const nextElement = startElement + incrimentValue * i;
       question = `${question} ${nextElement}`;
     } else question = `${question} ..`;
   }
-  const answer = String(startElement + incrimentValue * hiddingIndex);
+  const answer = String(startElement + incrimentValue * hiddenIndex);
   return cons(question, answer);
 };
 
