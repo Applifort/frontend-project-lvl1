@@ -23,8 +23,7 @@ const getQuestionAndAnswer = () => {
       answer = String(num1 / num2);
       break;
     default:
-      answer = false;
-      break;
+      return false;
   }
   const question = `${num1} ${operator} ${num2}`;
   return cons(question, answer);
