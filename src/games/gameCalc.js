@@ -31,4 +31,3 @@ const getQuestionAndAnswer = () => {
 };
 
 export default () => gameEngine(gameIntroduction, getQuestionAndAnswer);
-console.log('Tghnc');
