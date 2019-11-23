@@ -1,26 +1,32 @@
 import { cons } from '@hexlet/pairs';
-import { letRandom } from './mymath';
+import { l, random } from '@hexlet/pairs-data';
+import letRandom from '../utils';
+import gameEngine from '..';
 
-const gameCalc = () => {
-  const a = letRandom(0, 100);
-  const b = letRandom(0, 10);
-  const v = letRandom(1, 3);
-  let stringExpr = null;
-  let resultExpr = null;
-  switch (v) {
-    case 1:
-      stringExpr = `${a} + ${b}`;
-      resultExpr = a + b;
+const gameIntroduction = 'What is the result of the expression?';
+
+const operators = l('+', '/', '*');
+
+const getQuestionAndAnswer = () => {
+  const num1 = letRandom(0, 100);
+  const num2 = letRandom(0, 10);
+  const operator = random(operators);
+  let answer = null;
+  switch (operator) {
+    case '+':
+      answer = String(num1 + num2);
       break;
-    case 2:
-      stringExpr = `${a} * ${b}`;
-      resultExpr = a * b;
+    case '*':
+      answer = String(num1 * num2);
+      break;
+    case '/':
+      answer = String(num1 / num2);
       break;
     default:
-      stringExpr = `${a} / ${b}`;
-      resultExpr = a / b;
+      return false;
   }
-  return cons(stringExpr, String(resultExpr));
+  const question = `${num1} ${operator} ${num2}`;
+  return cons(question, answer);
 };
 
-export default gameCalc;
+export default () => gameEngine(gameIntroduction, getQuestionAndAnswer);

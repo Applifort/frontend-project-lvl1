@@ -1,10 +1,15 @@
 import { cons } from '@hexlet/pairs';
-import { letRandom, isEven } from './mymath';
+import letRandom from '../utils';
+import gameEngine from '..';
 
-const gameEven = () => {
-  const number = letRandom(0, 100);
-  const rightAnswer = isEven(number) ? 'yes' : 'no';
-  return cons(number, rightAnswer);
+const gameIntroduction = 'Answer "yes" if the question is even, otherwise answer "no".';
+
+const isEven = (number) => number % 2 === 0;
+
+const getQuestionAndAnswer = () => {
+  const question = letRandom(0, 100);
+  const answer = isEven(question) ? 'yes' : 'no';
+  return cons(question, answer);
 };
 
-export default gameEven;
+export default () => gameEngine(gameIntroduction, getQuestionAndAnswer);

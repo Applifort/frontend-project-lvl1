@@ -1,11 +1,20 @@
 import { cons } from '@hexlet/pairs';
-import { letRandom, nodAB } from './mymath';
+import letRandom from '../utils';
+import gameEngine from '..';
 
-const gameGcd = () => {
-  const a = letRandom(1, 50);
-  const b = letRandom(1, 25);
-  const result = nodAB(a, b);
-  return cons(`${a} ${b}`, String(result));
+const gameIntroduction = 'Find the greatest common divisor of given numbers.';
+
+const getGcd = (num1, num2) => {
+  if (num2 === 0) return num1;
+  return getGcd(num2, num1 % num2);
 };
 
-export default gameGcd;
+const getQuestionAndAnswer = () => {
+  const num1 = letRandom(1, 50);
+  const num2 = letRandom(1, 25);
+  const answer = String(getGcd(num1, num2));
+  const question = `${num1} ${num2}`;
+  return cons(question, answer);
+};
+
+export default () => gameEngine(gameIntroduction, getQuestionAndAnswer);

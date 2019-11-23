@@ -1,65 +1,23 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from '@hexlet/pairs';
-import gameEven from './games/gameEven';
-import gameCalc from './games/gameCalc';
-import gameGcd from './games/gameGcd';
-import gameProgression from './games/gameProgression';
-import gamePrime from './games/gamePrime';
 
-// Игру можно запустить с аргументом GameEven и GameCalc - это выбор игры.
-// если запустить без аргумента, то пройдет просто приветствие.
+const gameIterations = 3;
 
-const game = (nameOfGame) => {
-  console.log('Welcome to the Brain Games!');
-  switch (nameOfGame) {
-    case 'gameEven':
-      console.log('Answer "yes" if the number is even, otherwise answer "no".');
-      break;
-    case 'gameCalc':
-      console.log('What is the result of the expression?');
-      break;
-    case 'gameGcd':
-      console.log('Find the greatest common divisor of given numbers.');
-      break;
-    case 'gameProgression':
-      console.log('What number is missing in the progression?');
-      break;
-    case 'gamePrime':
-      console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-      break;
-    default: break;
-  }
-  const name = readlineSync.question('May I have your name? ');
-  const nameIs = name === '' ? 'Anonymous' : name;
-  console.log(`Hello, ${nameIs}!`);
-  for (let i = 0; i < 3; i += 1) {
-    let gameQA = null;
-    switch (nameOfGame) {
-      case 'gameEven':
-        gameQA = gameEven();
-        break;
-      case 'gameCalc':
-        gameQA = gameCalc();
-        break;
-      case 'gameGcd':
-        gameQA = gameGcd();
-        break;
-      case 'gameProgression':
-        gameQA = gameProgression();
-        break;
-      case 'gamePrime':
-        gameQA = gamePrime();
-        break;
-      default: return;
-    }
-    console.log(`Question: ${car(gameQA)}`);
-    const answer = readlineSync.question('Your answer: ');
-    if (answer !== cdr(gameQA)) {
-      console.log(`'${answer}' is wrong answer;(. Correct answer was '${cdr(gameQA)}'`);
-      console.log(`let's try again, ${nameIs}!`);
-      i = 0;
-    } else console.log('Correct!');
-  } console.log(`Congratulation, ${nameIs}!`);
+export default (gameIntroduction, runGame) => {
+  console.log(`Welcome to the Brain Games! \n${gameIntroduction}`);
+  const enteredName = readlineSync.question('May I have your name? ');
+  const name = enteredName === '' ? 'Anonymous' : enteredName;
+  console.log(`Hello, ${name}!`);
+  for (let i = 0; i < gameIterations; i += 1) {
+    const questionAndAnswer = runGame();
+    const question = car(questionAndAnswer);
+    const answer = cdr(questionAndAnswer);
+    console.log(`Question: ${question}`);
+    const usersAnswer = readlineSync.question('Your answer: ');
+    if (usersAnswer !== answer) {
+      console.log(`'${usersAnswer}' is wrong answer;(. Correct answer was '${answer}'`);
+      console.log(`let's try again, ${name}!`);
+      return;
+    } console.log('Correct!');
+  } console.log(`Congratulation, ${name}!`);
 };
-
-export default game;

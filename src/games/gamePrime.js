@@ -1,14 +1,19 @@
 import { cons } from '@hexlet/pairs';
-import { letRandom } from './mymath';
+import letRandom from '../utils';
+import gameEngine from '..';
 
-const gamePrime = () => {
-  const number = letRandom(2, 500);
-  let dividerCount = 0;
+const gameIntroduction = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const isPrime = (number) => {
   for (let i = 2; i < number; i += 1) {
-    if (number % i === 0) dividerCount += 1;
-  }
-  const rightAnswer = dividerCount === 0 ? 'yes' : 'no';
-  return cons(number, rightAnswer);
+    if (number % i === 0) return false;
+  } return true;
 };
 
-export default gamePrime;
+const getQuestionAndAnswer = () => {
+  const question = letRandom(2, 500);
+  const answer = isPrime(question) ? 'yes' : 'no';
+  return cons(question, answer);
+};
+
+export default () => gameEngine(gameIntroduction, getQuestionAndAnswer);

@@ -1,14 +1,10 @@
 env:
-  browser: true
-  commonjs: true
-  es6: true
   node: true
 plugins:
   - babel
 extends: 
   - 'eslint:recommended'
   - 'airbnb-base'
-  - 'airbnb'
 globals:
   Atomics: readonly
   SharedArrayBuffer: readonly

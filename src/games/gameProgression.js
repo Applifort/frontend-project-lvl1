@@ -1,20 +1,24 @@
 import { cons } from '@hexlet/pairs';
-import { letRandom } from './mymath';
+import letRandom from '../utils';
+import gameEngine from '..';
 
-const gameProgression = () => {
-  const arr = [];
-  arr[0] = letRandom(1, 20);
-  const volOfProg = letRandom(1, 10);
-  const elementOfHide = letRandom(3, 9);
-  let progMiss = `${arr[0]}`;
-  for (let i = 1; i < 10; i += 1) {
-    arr[i] = arr[i - 1] + volOfProg;
-    if (i !== elementOfHide) {
-      progMiss = `${progMiss} ${arr[i]}`;
-    } else progMiss = `${progMiss} ..`;
+const gameIntroduction = 'What number is missing in the progression?';
+
+const progressionLength = 10;
+
+const getQustionAndAnswer = () => {
+  const startElement = letRandom(1, 20);
+  const incrimentValue = letRandom(1, 10);
+  const hiddenIndex = letRandom(3, 9);
+  let question = '';
+  for (let i = 0; i < progressionLength; i += 1) {
+    if (i !== hiddenIndex) {
+      const nextElement = startElement + incrimentValue * i;
+      question = `${question} ${nextElement}`;
+    } else question = `${question} ..`;
   }
-  const hiddenElement = arr[elementOfHide];
-  return cons(progMiss, String(hiddenElement));
+  const answer = String(startElement + incrimentValue * hiddenIndex);
+  return cons(question, answer);
 };
 
-export default gameProgression;
+export default () => gameEngine(gameIntroduction, getQustionAndAnswer);
