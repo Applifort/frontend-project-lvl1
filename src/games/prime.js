@@ -6,7 +6,8 @@ const gameIntroduction = 'Answer "yes" if given number is prime. Otherwise answe
 
 const isPrime = (number) => {
   if (number <= 1) return false;
-  for (let i = 2; i < number; i += 1) {
+  const maxPossibleDevider = number / 2;
+  for (let i = 2; i <= maxPossibleDevider; i += 1) {
     if (number % i === 0) return false;
   } return true;
 };
