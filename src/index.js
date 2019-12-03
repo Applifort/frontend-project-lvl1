@@ -5,8 +5,8 @@ const roundsCount = 3;
 
 export default (gameIntroduction, runGame) => {
   console.log(`Welcome to the Brain Games! \n${gameIntroduction}`);
-  const enteredName = readlineSync.question('May I have your name? ');
-  const name = enteredName === '' ? 'Anonymous' : enteredName;
+  const userName = readlineSync.question('May I have your name? ');
+  const name = userName === '' ? 'Anonymous' : userName;
   console.log(`Hello, ${name}!`);
   for (let i = 0; i < roundsCount; i += 1) {
     const questionAndAnswer = runGame();
