@@ -8,16 +8,16 @@ const progressionLength = 10;
 
 const getQustionAndAnswer = () => {
   const startElement = letRandom(1, 20);
-  const incrimentValue = letRandom(1, 10);
-  const hiddenIndex = letRandom(3, 9);
+  const diff = letRandom(1, 10);
+  const hiddenElementIndex = letRandom(0, progressionLength - 1);
   let question = '';
   for (let i = 0; i < progressionLength; i += 1) {
-    if (i !== hiddenIndex) {
-      const nextElement = startElement + incrimentValue * i;
-      question = `${question} ${nextElement}`;
+    if (i !== hiddenElementIndex) {
+      const nextElement = startElement + diff * i;
+      question = question === '' ? `${nextElement}` : `${question} ${nextElement}`;
     } else question = `${question} ..`;
   }
-  const answer = String(startElement + incrimentValue * hiddenIndex);
+  const answer = String(startElement + diff * hiddenElementIndex);
   return cons(question, answer);
 };
 
