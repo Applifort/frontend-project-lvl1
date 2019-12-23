@@ -22,3 +22,14 @@ And choose the game you want to play
 
 [![asciicast](https://asciinema.org/a/HHLdVqEu1Alt6mG3NolZN7Abj.svg)](https://asciinema.org/a/HHLdVqEu1Alt6mG3NolZN7Abj)
     
+## Games inside
+### 1. "Calculator"
+Find is the result of the expression
+### 2. "Parity Check"
+Answer **yes** if the number is even, otherwise answer **no**
+### 3. "Greatest common divisor"
+Find the greatest common divisor of given numbers
+### 4. "Is a prime"
+Answer **yes** if given number is prime. Otherwise answer **no**
+### 5. "Progression"
+Find missing number in the progression
