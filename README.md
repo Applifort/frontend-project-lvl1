@@ -20,5 +20,5 @@ For lauch the games you should use game menu.
     
 And choose the game you want to play
 
-    
+    [![asciicast](https://asciinema.org/a/HHLdVqEu1Alt6mG3NolZN7Abj.svg)](https://asciinema.org/a/HHLdVqEu1Alt6mG3NolZN7Abj)
     
