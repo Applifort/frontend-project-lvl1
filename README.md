@@ -5,7 +5,7 @@
 
 A little console game. Its NPM package, so you need nodejs to install and play it:)
 
-# Installing
+## Installing
 
     npm install -g gamegabitov13
     
