@@ -11,4 +11,16 @@ A little console game. Its NPM package, so you need nodejs to install and play i
     
 [![asciicast](https://asciinema.org/a/z5lvDltwifporaJa8hdZMDtsG.svg)](https://asciinema.org/a/z5lvDltwifporaJa8hdZMDtsG)
 
+## Playing the games
 
+**If number is even**
+
+Answer **yes** if the number is even, otherwise answer **no**
+
+### Launch
+
+    brain-even
+    
+### Or you can use menu
+
+    brain-menu
