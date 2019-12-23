@@ -14,16 +14,11 @@ A little console game. Its NPM package, so you need nodejs to install and play i
 
 ## Playing the games
 
-**If number is even**
-
-Answer **yes** if the number is even, otherwise answer **no**
-
-### Launch
-
-    brain-even
-    
-### Or you can use menu
+For lauch the games you should use game menu.
 
     brain-menu
+    
+And choose the game you want to play
+
     
     
