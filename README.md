@@ -8,6 +8,7 @@ A little console game. Its NPM package, so you need nodejs to install and play i
 ### Installing
 
     npm install -g gamegabitov13
+
     
 [![asciicast](https://asciinema.org/a/z5lvDltwifporaJa8hdZMDtsG.svg)](https://asciinema.org/a/z5lvDltwifporaJa8hdZMDtsG)
 
